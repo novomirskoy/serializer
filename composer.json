@@ -20,7 +20,8 @@
         "jms/metadata": "^2.0",
         "doctrine/annotations": "^1.0",
         "doctrine/instantiator": "^1.0.3",
-        "hoa/compiler": "^3.17.08.08"
+        "hoa/compiler": "^3.17.08.08",
+        "zendframework/zend-stdlib": "^3.2"
     },
     "suggest": {
         "symfony/yaml": "Required if you'd like to use the YAML metadata format.",
@@ -63,5 +64,8 @@
         "branch-alias": {
             "dev-master": "3.3-dev"
         }
+    },
+    "replace": {
+        "jms/serializer": "^2.3|^3.0"
     }
 }
