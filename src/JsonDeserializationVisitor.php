@@ -86,6 +86,10 @@ final class JsonDeserializationVisitor extends AbstractVisitor implements Deseri
      */
     public function visitArray($data, array $type): array
     {
+        if (\Zend\Stdlib\ArrayUtils::isHashTable($data)) {
+            $data = current($data);
+        }
+
         if (!\is_array($data)) {
             throw new RuntimeException(sprintf('Expected array, but got %s: %s', \gettype($data), json_encode($data)));
         }
